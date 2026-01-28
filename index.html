@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casey Reas - Computational Artist & Processing Founder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Slide Navigation -->
+        <div class="slide-counter">
+            <span id="current-slide">1</span> / <span id="total-slides">7</span>
+        </div>
+        
+        <div class="nav-buttons">
+            <button id="prev-btn" class="nav-btn">←</button>
+            <button id="next-btn" class="nav-btn">→</button>
+        </div>
+
+        <!-- Slide 1: Title -->
+        <section class="slide active" data-slide="1">
+            <div class="slide-content title-slide">
+                <h1 class="main-title">Casey Reas</h1>
+                <p class="subtitle">Computational Artist & Co-Founder of Processing</p>
+                <div class="title-decoration"></div>
+            </div>
+        </section>
+
+        <!-- Slide 2: Introduction with Image -->
+        <section class="slide" data-slide="2">
+            <div class="slide-content two-column">
+                <div class="content-left">
+                    <h2>Who is Casey Reas?</h2>
+                    <p>Casey Reas is an American artist, educator, and co-founder of Processing, the revolutionary programming language and environment that has democratized creative coding for millions worldwide.</p>
+                    <p>His work explores the intersection of software, conceptual art, and data visualization, creating dynamic systems that generate form through algorithmic processes.</p>
+                    <p>Currently a Professor at UCLA's Design Media Arts department, Reas has exhibited internationally at institutions including the Whitney Museum, SFMOMA, and Centre Pompidou.</p>
+                </div>
+                <div class="content-right image-container">
+                    <div class="image-placeholder">
+                        <img src="Casey-Reas-Headshot.jpg" alt="Casey Reas">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Processing History -->
+        <section class="slide" data-slide="3">
+            <div class="slide-content">
+                <h2>The Birth of Processing</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2001</div>
+                        <div class="timeline-content">
+                            <h3>Foundation</h3>
+                            <p>Casey Reas and Ben Fry initiated Processing at MIT Media Lab, building upon concepts from John Maeda's Design By Numbers.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2004</div>
+                        <div class="timeline-content">
+                            <h3>Public Release</h3>
+                            <p>Processing 1.0 was released as open-source software, making creative coding accessible to artists, designers, and educators worldwide.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">Now</div>
+                        <div class="timeline-content">
+                            <h3>Global Impact</h3>
+                            <p>Processing has become one of the most influential tools in creative coding, with a thriving community of millions and derivatives like p5.js expanding its reach.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Processing Philosophy with Demo -->
+        <section class="slide" data-slide="4">
+            <div class="slide-content">
+                <h2>Processing: Software Sketchbook</h2>
+                <div class="philosophy-grid">
+                    <div class="philosophy-text">
+                        <p class="lead-text">Processing was designed to teach fundamentals of computer programming within a visual context and to serve as a software sketchbook.</p>
+                        <ul class="feature-list">
+                            <li><strong>Simplicity:</strong> Learn to code through immediate visual feedback</li>
+                            <li><strong>Accessibility:</strong> Free, open-source, and cross-platform</li>
+                            <li><strong>Community:</strong> Extensive libraries, tutorials, and global user base</li>
+                            <li><strong>Expression:</strong> Bridge between code and visual art</li>
+                        </ul>
+                    </div>
+                    <div class="demo-container" id="demo1">
+                        <canvas id="canvas1"></canvas>
+                        <p class="demo-label">Interactive Demo: Processing Sketch</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Artwork Gallery -->
+        <section class="slide scrollable" data-slide="5">
+            <div class="slide-content">
+                <h2>Casey's Processing Examples</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="demo-container">
+                            <div id="canvas3"></div>
+                        </div>
+                        <p class="gallery-caption">Superformula - Generative Organic Forms</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="demo-container">
+                            <div id="canvas4"></div>
+                        </div>
+                        <p class="gallery-caption">Parameterize: Chair - Click to randomize</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="demo-container">
+                            <div id="canvas5"></div>
+                        </div>
+                        <p class="gallery-caption">Parameterize: Wave - Click to regenerate</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="demo-container">
+                            <div id="canvas6"></div>
+                        </div>
+                        <p class="gallery-caption">Word Frequency Visualization</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Generative Art Demo -->
+        <section class="slide" data-slide="6">
+            <div class="slide-content">
+                <h2>Generative Systems in Action</h2>
+                <p class="demo-intro">Reas' work demonstrates how simple rules can create complex, organic forms. This interactive demo showcases fundamental principles of generative art.</p>
+                <div class="demo-container large" id="demo2">
+                    <canvas id="canvas2"></canvas>
+                    <div class="demo-controls">
+                        <button class="control-btn" onclick="resetDemo2()">Reset</button>
+                        <button class="control-btn" onclick="toggleDemo2()">Pause/Play</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: Legacy & Impact -->
+        <section class="slide" data-slide="7">
+            <div class="slide-content closing-slide">
+                <h2>Impact & Legacy</h2>
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <h3>Education</h3>
+                        <p>Processing has been adopted by thousands of schools worldwide, introducing millions to programming through art and design.</p>
+                    </div>
+                    <div class="impact-card">
+                        <h3>Community</h3>
+                        <p>The Processing Foundation continues to support open-source tools that empower creative expression through code.</p>
+                    </div>
+                    <div class="impact-card">
+                        <h3>Art World</h3>
+                        <p>Reas' work has helped legitimize software art in major museums and galleries, bridging digital and traditional art spaces.</p>
+                    </div>
+                    <div class="impact-card">
+                        <h3>Innovation</h3>
+                        <p>His influence extends to data visualization, interactive design, and the broader creative technology ecosystem.</p>
+                    </div>
+                </div>
+                <div class="closing-quote">
+                    <p>"Software is the bridge between our ideas and their visual expression in a form that is constantly changing and evolving."</p>
+                    <span class="quote-attribution">— Casey Reas</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
