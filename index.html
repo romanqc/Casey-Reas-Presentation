@@ -94,7 +94,7 @@
                     </div>
                     <div class="demo-container" id="demo1">
                         <canvas id="canvas1"></canvas>
-                        <p class="demo-label">Interactive Demo: Processing Sketch</p>
+                        <p class="demo-label">Interactive Demo: Basic Processing Sketch</p>
                     </div>
                 </div>
             </div>
@@ -103,7 +103,7 @@
         <!-- Slide 5: Artwork Gallery -->
         <section class="slide scrollable" data-slide="5">
             <div class="slide-content">
-                <h2>Casey's Processing Examples</h2>
+                <h2>Selected Works</h2>
                 <div class="gallery-grid">
                     <div class="gallery-item">
                         <div class="demo-container">
@@ -133,16 +133,101 @@
             </div>
         </section>
 
-        <!-- Slide 6: Generative Art Demo -->
+        <!-- Slide 6: Casey's Artwork Slideshow -->
         <section class="slide" data-slide="6">
             <div class="slide-content">
-                <h2>Generative Systems in Action</h2>
-                <p class="demo-intro">Reas' work demonstrates how simple rules can create complex, organic forms. This interactive demo showcases fundamental principles of generative art.</p>
-                <div class="demo-container large" id="demo2">
-                    <canvas id="canvas2"></canvas>
-                    <div class="demo-controls">
-                        <button class="control-btn" onclick="resetDemo2()">Reset</button>
-                        <button class="control-btn" onclick="toggleDemo2()">Pause/Play</button>
+                <h2>Selected Artworks</h2>
+                
+                <div class="artwork-slideshow">
+                    <div class="slideshow-container">
+                        <!-- Artwork slides -->
+                        <div class="artwork-slide active-artwork">
+                            <div class="artwork-image-wrapper">
+                                <div class="image-placeholder">
+                                    <img src="Amplified Technical Image 3 2025.png" alt="Casey Reas Artwork 1">
+                                </div>
+                            </div>
+                            <p class="artwork-caption">Amplified Technical Image #3 2025</p>
+                        </div>
+                        
+                        <div class="artwork-slide">
+                            <div class="artwork-image-wrapper">
+                                <div class="image-placeholder">
+                                    <img src="Theres No Distance.jpg" alt="Casey Reas Artwork 2">
+                                </div>
+                            </div>
+                            <p class="artwork-caption">There's No Distance 2023</p>
+                        </div>
+                        
+                        <div class="artwork-slide">
+                            <div class="artwork-image-wrapper">
+                                <div class="image-placeholder">
+                                    <img src="cr_substrate_everything_2_s.png" alt="Casey Reas Artwork 3">
+                                </div>
+                            </div>
+                            <p class="artwork-caption">Substrate (Everything. Every Detail.) 2013</p>
+                        </div>
+                        
+                        <div class="artwork-slide">
+                            <div class="artwork-image-wrapper">
+                                <div class="image-placeholder">
+                                    <img src="cr_tissue-A-00_w.jpg" alt="Casey Reas Artwork 4">
+                                </div>
+                            </div>
+                            <p class="artwork-caption">Tissue A-00 2002</p>
+                        </div>
+                        
+                        <div class="artwork-slide">
+                            <div class="artwork-image-wrapper">
+                                <div class="image-placeholder">
+                                    <img src="rgb_plotter2_w.jpg" alt="Casey Reas Artwork 5">
+                                </div>
+                            </div>
+                            <p class="artwork-caption">RGB-3-170°-166°-130° 2020</p>
+                        </div>
+                        
+                        <div class="artwork-slide">
+                            <div class="artwork-image-wrapper">
+                                <div class="image-placeholder">
+                                    <img src="cr_yesnosoftware2_1_o.png" alt="Casey Reas Artwork 6">
+                                </div>
+                            </div>
+                            <p class="artwork-caption">Yes No (Software 2) 2002</p>
+                        </div>
+                        
+                        <div class="artwork-slide">
+                            <div class="artwork-image-wrapper">
+                                <div class="image-placeholder">
+                                    <img src="Technical Image 7.jpg" alt="Casey Reas Artwork 7">
+                                </div>
+                            </div>
+                            <p class="artwork-caption">Technical Image #7 2025</p>
+                        </div>
+                        
+                        <div class="artwork-slide">
+                            <div class="artwork-image-wrapper">
+                                <div class="image-placeholder">
+                                    <img src="cr_chronographvariationsa3_w.jpg" alt="Casey Reas Artwork 8">
+                                </div>
+                            </div>
+                            <p class="artwork-caption">Chronograph Variations A-3 (K-02-0528) 2011</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slideshow navigation -->
+                    <button class="slideshow-nav prev-artwork" aria-label="Previous artwork">‹</button>
+                    <button class="slideshow-nav next-artwork" aria-label="Next artwork">›</button>
+                    
+                    <!-- Slide indicators -->
+                    <div class="slideshow-indicators">
+                        <span class="indicator active-indicator" data-slide-index="0"></span>
+                        <span class="indicator" data-slide-index="1"></span>
+                        <span class="indicator" data-slide-index="2"></span>
+                        <span class="indicator" data-slide-index="3"></span>
+                        <span class="indicator" data-slide-index="4"></span>
+                        <span class="indicator" data-slide-index="5"></span>
+                        <span class="indicator" data-slide-index="6"></span>
+                        <span class="indicator" data-slide-index="7"></span>
                     </div>
                 </div>
             </div>

@@ -6,6 +6,7 @@ const totalSlides = 7;
 document.addEventListener('DOMContentLoaded', function() {
     updateSlideCounter();
     updateNavButtons();
+    setupArtworkSlideshow(); // Initialize artwork slideshow
     initDemos();
     
     // Keyboard navigation
@@ -50,6 +51,70 @@ function updateNavButtons() {
     document.getElementById('prev-btn').disabled = currentSlide === 1;
     document.getElementById('next-btn').disabled = currentSlide === totalSlides;
 }
+
+// Artwork Slideshow (Slide 6)
+let currentArtworkIndex = 0;
+const artworkSlides = [];
+const indicators = [];
+
+function setupArtworkSlideshow() {
+    const artworkSlidesElements = document.querySelectorAll('.artwork-slide');
+    const indicatorElements = document.querySelectorAll('.indicator');
+    const prevBtn = document.querySelector('.prev-artwork');
+    const nextBtn = document.querySelector('.next-artwork');
+    
+    // Convert NodeLists to arrays
+    artworkSlides.push(...artworkSlidesElements);
+    indicators.push(...indicatorElements);
+    
+    // Setup navigation buttons
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => changeArtwork(-1));
+    }
+    
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => changeArtwork(1));
+    }
+    
+    // Setup indicator clicks
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => goToArtwork(index));
+    });
+    
+    // Keyboard navigation for artwork slideshow (only when on slide 6)
+    document.addEventListener('keydown', (e) => {
+        if (currentSlide === 6) {
+            if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                changeArtwork(-1);
+            }
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                changeArtwork(1);
+            }
+        }
+    });
+}
+
+function changeArtwork(direction) {
+    const newIndex = currentArtworkIndex + direction;
+    
+    if (newIndex < 0 || newIndex >= artworkSlides.length) return;
+    
+    goToArtwork(newIndex);
+}
+
+function goToArtwork(index) {
+    // Remove active class from current
+    artworkSlides[currentArtworkIndex].classList.remove('active-artwork');
+    indicators[currentArtworkIndex].classList.remove('active-indicator');
+    
+    // Add active class to new
+    currentArtworkIndex = index;
+    artworkSlides[currentArtworkIndex].classList.add('active-artwork');
+    indicators[currentArtworkIndex].classList.add('active-indicator');
+}
+
 
 // ============================================
 // GENERATIVE ART DEMOS
